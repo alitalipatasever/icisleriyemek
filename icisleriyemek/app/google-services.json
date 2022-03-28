@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "490370378632",
+    "firebase_url": "https://icisleriyemek-default-rtdb.firebaseio.com",
+    "project_id": "icisleriyemek",
+    "storage_bucket": "icisleriyemek.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490370378632:android:3f37edb79a6cc9946ba83d",
+        "android_client_info": {
+          "package_name": "com.alitalipatasever.icisleriyemek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490370378632-e726u7ot7u05hjpm3r1209687rbpbb5d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWviJTs3FbbpbVUhkTAwXX3FwO3lALSpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490370378632-e726u7ot7u05hjpm3r1209687rbpbb5d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

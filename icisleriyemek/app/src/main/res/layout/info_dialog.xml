@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backrepeat"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/banner_bg" />
+
+    <LinearLayout
+        android:id="@+id/lytBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/aboutUs"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/icisleri_beyaz" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:src="@drawable/ic_yemek"
+            android:text="HARCAMA LİSTESİ"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ekle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/icisleri_altbirim_logo" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bina"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lytBanner"
+        android:src="@drawable/icisleri_bina" />
+
+    <TextView
+        android:id="@+id/TVtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bina"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="\nİçişleri Yemek Listesi Uygulaması İçişleri Bakanlığı Bilgi Teknolojileri Genel Müdürlüğü Uygulama Geliştirme birimi tarafından geliştirilmiştir.\n\nGeri Bildirim Adresi\na.talip.atasever@icisleri.gov.tr\n"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/BtnHayir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TVtitle"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buton_koyugri"
+        android:text="Tamam"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

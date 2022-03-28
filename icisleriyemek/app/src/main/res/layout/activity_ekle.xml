@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/acikgri2">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backrepeat">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/banner_bg" />
+
+            <LinearLayout
+                android:id="@+id/lytBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/aboutUs"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/icisleri_beyaz" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:src="@drawable/ic_yemek"
+                    android:text="HARCAMA LİSTESİ"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cikis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Çıkış"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/cerceve_bg"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/lytBanner"
+                android:id="@+id/lytList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/gunYemekListesi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pazartesi"
+                    android:textSize="18dp"
+                    android:textColor="@color/koyugri2"
+                    android:layout_marginBottom="10dp"/>
+                <EditText
+                    android:id="@+id/eTtarih"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Örn: 01 Ocak Pazartesi"
+                    android:background="@drawable/beyaz_oval_bg"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                    android:drawablePadding="15dp"
+                    android:layout_margin="5dp"/>
+                <EditText
+                    android:id="@+id/eTcesit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="1.Çeşit"
+                    android:background="@drawable/beyaz_oval_bg"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+                    android:drawablePadding="15dp"
+                    android:layout_margin="5dp"/>
+                <EditText
+                    android:id="@+id/eTcesit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="2.Çeşit"
+                    android:background="@drawable/beyaz_oval_bg"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+                    android:drawablePadding="15dp"
+                    android:layout_margin="5dp"/>
+                <EditText
+                    android:id="@+id/eTcesit3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="3.Çeşit"
+                    android:background="@drawable/beyaz_oval_bg"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+                    android:drawablePadding="15dp"
+                    android:layout_margin="5dp"/>
+                <EditText
+                    android:id="@+id/eTcesit4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="4.Çeşit"
+                    android:background="@drawable/beyaz_oval_bg"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+                    android:drawablePadding="15dp"
+                    android:layout_margin="5dp"/>
+                <EditText
+                    android:id="@+id/eTcesit5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="5.Çeşit"
+                    android:background="@drawable/beyaz_oval_bg"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+                    android:drawablePadding="15dp"
+                    android:layout_margin="5dp"/>
+
+
+                <Button
+                    android:id="@+id/kaydet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kaydet"
+                    android:textColor="@color/white"
+                    android:background="@drawable/buton_kirmizi"
+                    android:padding="15dp"
+                    android:layout_margin="5dp"/>
+                <Button
+                    android:id="@+id/getir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kayıtlı verileri getir/güncelle"
+                    android:textColor="@color/white"
+                    android:background="@drawable/buton_koyugri"
+                    android:padding="15dp"
+                    android:layout_margin="5dp"/>
+
+                <LinearLayout
+                    android:id="@+id/lytInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lytList"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/beyaz_oval_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/info" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Yemek Listesini Eksiksiz Giriniz."
+                        android:textSize="12dp"
+                        android:textColor="@color/kirmizi" />
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="100dp"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tableLayout"
+        android:background="@drawable/footer_bg">
+        <TableRow
+            android:layout_margin="5dp">
+            <Button
+                android:layout_width="100dp"
+                android:id="@+id/btnPzt"
+                android:text="PZT"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:background="@drawable/buton_kirmizi"
+                android:layout_margin="5dp"/>
+            <Button
+                android:layout_width="100dp"
+                android:id="@+id/btnSali"
+                android:text="SALI"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:background="@drawable/footer_bg"
+                android:layout_margin="5dp"/>
+            <Button
+                android:layout_width="100dp"
+                android:id="@+id/btnCrs"
+                android:text="ÇRŞ"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:background="@drawable/footer_bg"
+                android:layout_margin="5dp"/>
+            <Button
+                android:layout_width="100dp"
+                android:id="@+id/btnPrs"
+                android:text="PRŞ"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:background="@drawable/footer_bg"
+                android:layout_margin="5dp"/>
+            <Button
+                android:layout_width="100dp"
+                android:id="@+id/btnCuma"
+                android:text="CUMA"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:background="@drawable/footer_bg"
+                android:layout_margin="5dp"/>
+
+        </TableRow>
+    </TableLayout>
+
+
+
+
+</RelativeLayout>

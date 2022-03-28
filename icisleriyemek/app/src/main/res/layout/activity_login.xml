@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/acikgri2">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backrepeat">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/banner_bg" />
+
+            <LinearLayout
+                android:id="@+id/lytBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/aboutUs"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/icisleri_beyaz" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:src="@drawable/ic_yemek"
+                    android:text="HARCAMA LİSTESİ"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ekle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/icisleri_altbirim_logo" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/bina"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lytBanner"
+                android:src="@drawable/icisleri_bina" />
+
+            <LinearLayout
+                android:layout_below="@+id/bina"
+                android:id="@+id/lytList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tarih"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="İçişleri Bakanlığı"
+                    android:textColor="@color/koyugri2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yemekhane Yönetim Paneli"
+                    android:textSize="18dp"
+                    android:textColor="@color/koyugri2"
+                    android:layout_marginBottom="10dp"/>
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Kullanıcı Adı"
+                    android:background="@drawable/beyaz_oval_bg"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_person_24"
+                    android:drawablePadding="15dp"
+                    android:layout_margin="5dp"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Şifre"
+                    android:background="@drawable/beyaz_oval_bg"
+                    android:padding="15dp"
+                    android:inputType="textPassword"
+                    android:drawableLeft="@drawable/ic_baseline_password_24"
+                    android:drawablePadding="15dp"
+                    android:layout_margin="5dp"
+                    android:textSize="16dp"/>
+
+                <Button
+                    android:id="@+id/btnGiris"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giriş"
+                    android:textColor="@color/white"
+                    android:background="@drawable/buton_kirmizi"
+                    android:padding="15dp"
+                    android:layout_margin="5dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lytInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytList"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/beyaz_oval_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/info" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yeni Yönetici Hesabı Oluşturmak veya Şifre Öğrenmek için a.talip.atasever@icisleri.gov.tr adresine mail gönderebilirsiniz."
+                    android:textSize="12dp"
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
