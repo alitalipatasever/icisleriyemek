@@ -172,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
                 txtcesit4.setText(yemekListesi.get(3).toString());
                 txtcesit5.setText(yemekListesi.get(4).toString());
                 txttarih.setText(yemekListesi.get(5).toString());
+                //deneme
 
                 yemekListesi.clear();
 
