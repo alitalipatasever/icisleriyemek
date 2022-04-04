@@ -40,8 +40,9 @@ public class Login extends AppCompatActivity {
         giris.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String strUsername = username.getText().toString();
+                String strUsername1 = username.getText().toString();
                 String strPassword = password.getText().toString();
+                String strUsername =  strUsername1.trim();
                 if(strUsername.isEmpty() || strPassword.isEmpty()){
                     //Toast.makeText(getApplicationContext(),"Kullanıcı Adı Boş Bırakılamaz!",Toast.LENGTH_SHORT).show();
                     alertMesajText = "Kullanıcı Adı veya Şifre Boş Bırakılamaz!";

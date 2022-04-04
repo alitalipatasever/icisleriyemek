@@ -14,4 +14,11 @@
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/keep_calm</item>
     </style>
+
+    <style name="DialogTheme" parent="android:Theme.Material.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:headerBackground">@color/kirmizi</item>
+    </style>
 </resources>

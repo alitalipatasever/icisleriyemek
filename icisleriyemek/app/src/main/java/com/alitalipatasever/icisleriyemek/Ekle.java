@@ -3,12 +3,15 @@ package com.alitalipatasever.icisleriyemek;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +22,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Ekle extends AppCompatActivity {
 
@@ -28,7 +36,7 @@ public class Ekle extends AppCompatActivity {
     Button btnPzt,btnSali,btnCrs,btnPrs,btnCuma;
     TextView cikis,gunYemekListesi;
     Button kaydet,getir;
-    String cesit1="Mercimek Çorbası", cesit2="Kuru Fasulye", cesit3="Pirinç Pilavı", cesit4="Turşu", cesit5="Ayran";
+    String cesit1, cesit2, cesit3, cesit4, cesit5;
     String pazartesi="Pazartesi", sali="Salı", carsamba="Çarşamba", persembe="Perşembe", cuma="Cuma";
     String tarih="23 Mart 2022";
     String gunAdi="";
@@ -40,22 +48,7 @@ public class Ekle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ekle);
 
-        btnPzt = (Button)findViewById(R.id.btnPzt);
-        btnSali = (Button)findViewById(R.id.btnSali);
-        btnCrs = (Button)findViewById(R.id.btnCrs);
-        btnPrs = (Button)findViewById(R.id.btnPrs);
-        btnCuma = (Button)findViewById(R.id.btnCuma);
-
-        eTtarih = (EditText)findViewById(R.id.eTtarih);
-        eTcesit1 = (EditText)findViewById(R.id.eTcesit1);
-        eTcesit2 = (EditText)findViewById(R.id.eTcesit2);
-        eTcesit3 = (EditText)findViewById(R.id.eTcesit3);
-        eTcesit4 = (EditText)findViewById(R.id.eTcesit4);
-        eTcesit5 = (EditText)findViewById(R.id.eTcesit5);
-        cikis = (TextView)findViewById(R.id.cikis);
-        gunYemekListesi = (TextView)findViewById(R.id.gunYemekListesi);
-        kaydet = (Button)findViewById(R.id.kaydet);
-        getir = (Button)findViewById(R.id.getir);
+        elementDefinition();
 
         db = FirebaseDatabase.getInstance();
 
@@ -85,6 +78,7 @@ public class Ekle extends AppCompatActivity {
                 eTcesit3.setText("");
                 eTcesit4.setText("");
                 eTcesit5.setText("");
+                gunAdi=pazartesi;
             }
         });
         btnSali.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +97,7 @@ public class Ekle extends AppCompatActivity {
                 eTcesit3.setText("");
                 eTcesit4.setText("");
                 eTcesit5.setText("");
+                gunAdi=sali;
             }
         });
         btnCrs.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +116,7 @@ public class Ekle extends AppCompatActivity {
                 eTcesit3.setText("");
                 eTcesit4.setText("");
                 eTcesit5.setText("");
+                gunAdi=carsamba;
             }
         });
         btnPrs.setOnClickListener(new View.OnClickListener() {
@@ -139,6 +135,7 @@ public class Ekle extends AppCompatActivity {
                 eTcesit3.setText("");
                 eTcesit4.setText("");
                 eTcesit5.setText("");
+                gunAdi=persembe;
             }
         });
         btnCuma.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +154,7 @@ public class Ekle extends AppCompatActivity {
                 eTcesit3.setText("");
                 eTcesit4.setText("");
                 eTcesit5.setText("");
+                gunAdi=cuma;
             }
         });
 
@@ -239,7 +237,60 @@ public class Ekle extends AppCompatActivity {
             }
         });
 
+        eTtarih.setInputType(InputType.TYPE_NULL);
+        eTtarih.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar cldr = Calendar.getInstance();
+                int day = cldr.get(Calendar.DAY_OF_MONTH);
+                int month = cldr.get(Calendar.MONTH);
+                int year = cldr.get(Calendar.YEAR);
+
+                // date picker dialog
+                DatePickerDialog picker = new DatePickerDialog(Ekle.this,R.style.DialogTheme,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+                                Calendar cal = Calendar.getInstance();
+                                cal.set(Calendar.YEAR,year);
+                                cal.set(Calendar.MONTH,monthOfYear);
+                                cal.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+                                Date chosenDate = cal.getTime();
+
+                                DateFormat df_full = DateFormat.getDateInstance(DateFormat.FULL);
+                                String df_full_str = df_full.format(chosenDate);
+
+                                eTtarih.setText(df_full_str);
+
+                                //eTtarih.setText(dayOfMonth + "." + (monthOfYear + 1) + "." + year);
+                            }
+                        }, year, month, day);
+                picker.show();
+            }
+        });
+
     }
+
+    public void elementDefinition(){
+        btnPzt = (Button)findViewById(R.id.btnPzt);
+        btnSali = (Button)findViewById(R.id.btnSali);
+        btnCrs = (Button)findViewById(R.id.btnCrs);
+        btnPrs = (Button)findViewById(R.id.btnPrs);
+        btnCuma = (Button)findViewById(R.id.btnCuma);
+
+        eTtarih = (EditText)findViewById(R.id.eTtarih);
+        eTcesit1 = (EditText)findViewById(R.id.eTcesit1);
+        eTcesit2 = (EditText)findViewById(R.id.eTcesit2);
+        eTcesit3 = (EditText)findViewById(R.id.eTcesit3);
+        eTcesit4 = (EditText)findViewById(R.id.eTcesit4);
+        eTcesit5 = (EditText)findViewById(R.id.eTcesit5);
+        cikis = (TextView)findViewById(R.id.cikis);
+        gunYemekListesi = (TextView)findViewById(R.id.gunYemekListesi);
+        kaydet = (Button)findViewById(R.id.kaydet);
+        getir = (Button)findViewById(R.id.getir);
+    }
+
     public void Ekle (String gunAdi,String tarih, String cesit1, String cesit2, String cesit3,String cesit4, String cesit5){
 
         DatabaseReference dbRef = db.getReference(gunAdi);

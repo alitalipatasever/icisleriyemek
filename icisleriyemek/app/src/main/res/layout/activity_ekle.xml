@@ -86,12 +86,12 @@
                     android:id="@+id/eTtarih"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Örn: 01 Ocak Pazartesi"
+                    android:hint="Tarih Seçiniz"
                     android:background="@drawable/beyaz_oval_bg"
                     android:padding="15dp"
                     android:drawableLeft="@drawable/ic_baseline_date_range_24"
                     android:drawablePadding="15dp"
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp" />
                 <EditText
                     android:id="@+id/eTcesit1"
                     android:layout_width="match_parent"
@@ -183,7 +183,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Yemek Listesini Eksiksiz Giriniz."
+                        android:text="Veri Girişi Yapılırken\nDikkat Edilmesi Gereken Hususlar\n\n-Yemek olmayacak gün için sadece tarih girişi yapılmalıdır\n-Yemek çeşidi standart olarak 5 çeşit belirlenmiştir. Yemek olmayan çeşitler boş bırakılmalıdır.\nKaydedilen menüyü görmek için kayıtlı verileri getir/güncelle butonuna basılmalıdır.\n"
                         android:textSize="12dp"
                         android:textColor="@color/kirmizi" />
 
@@ -207,7 +207,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/tableLayout"
-        android:background="@drawable/footer_bg">
+        android:background="@drawable/footer_duz_bg">
         <TableRow
             android:layout_margin="5dp">
             <Button

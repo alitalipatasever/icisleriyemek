@@ -175,9 +175,6 @@
 
 
             </LinearLayout>
-
-
-
         </RelativeLayout>
 
 
@@ -187,7 +184,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/tableLayout"
-        android:background="@drawable/footer_bg">
+        android:background="@drawable/footer_duz_bg">
         <TableRow
             android:layout_margin="5dp">
             <Button
