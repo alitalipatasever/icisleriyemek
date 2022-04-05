@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView ekle;
     Button btnPzt,btnSali,btnCrs,btnPrs,btnCuma;
     FirebaseDatabase db;
-    String pazartesi="Pazartesi", sali="Salı", carsamba="Çarşamba", persembe="Perşembe", cuma="Cuma";
+    String pazartesi="Pazartesi", sali="Salı", carsamba="Çarşamba", persembe="Perşembe", cuma="Cuma", cumartesi="Cumartesi", pazar="Pazar";
     final Context context = this;
     String dayName;
     Drawable btn_bg_kirmizi, btn_bg_koyugri;
@@ -226,7 +226,12 @@ public class MainActivity extends AppCompatActivity {
         Format f = new SimpleDateFormat("EEEE");
         dayName = f.format(new Date());
 
+        if (dayName.equals(cumartesi)||dayName.equals(pazar)){
+            alertMesaj("Haftasonu Yemek Hizmeti Sunulmamaktadır!");
+        }
+
     }
+
 
     public void navigationBar(){
         btnPzt.setOnClickListener(new View.OnClickListener() {
