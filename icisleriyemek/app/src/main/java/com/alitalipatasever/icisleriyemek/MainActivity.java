@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         dayName();
         dayKontrol();
         navigationBar();
+        //yemekListesiKontrol();
 
     }
 
@@ -182,7 +183,6 @@ public class MainActivity extends AppCompatActivity {
                 txtcesit5.setText(yemekListesi.get(4).toString());
                 txttarih.setText(yemekListesi.get(5).toString());
 
-
                 yemekListesi.clear();
 
                 String strCesit1 = txtcesit1.getText().toString();
@@ -229,6 +229,20 @@ public class MainActivity extends AppCompatActivity {
         if (dayName.equals(cumartesi)||dayName.equals(pazar)){
             alertMesaj("Haftasonu Yemek Hizmeti Sunulmamaktadır!");
         }
+
+    }
+    public void yemekListesiKontrol(){
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        //System.out.println("Today's date: "+ simpleDateFormat.format(calendar.getTime()));
+        Format f = new SimpleDateFormat("dd/MM/yyyy");
+        dayName = f.format(new Date());
+
+        String gun = dayName.substring(0,2);
+
+//        if (dayName.equals(cumartesi)||dayName.equals(pazar)){
+//            alertMesaj("Haftasonu Yemek Hizmeti Sunulmamaktadır!");
+//        }
 
     }
 
