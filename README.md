@@ -1,4 +1,3 @@
 # icisleriyemek
 
-!["FritOffice"](https://github.com/alitalipatasever/icisleriyemek/app/src/main/res/drawable/icy_menu.jpeg)
-!["FritOffice"](https://github.com/alitalipatasever/icisleriyemek/app/src/main/res/drawable/icy_panel.jpeg)
+!["appSS"](https://github.com/alitalipatasever/icisleriyemek/blob/main/icisleriyemek/app/src/main/res/drawable/pre_yemek.jpg)
